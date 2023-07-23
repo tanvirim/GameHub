@@ -1,22 +1,22 @@
 import useGenres from "../hooks/useGenres";
 
 const GenresList = () => {
-  const { genres, errors, loading } = useGenres();
+  const { data, errors, loading } = useGenres();
 
   if (loading) {
-    return <div>Loading...</div>; // Handle loading state
+    return <div>Loading...</div>; // Show loading indicator while data is being fetched
   }
 
   if (errors) {
-    return <div>Error: {errors}</div>; // Handle error state
+    return <div>Error: {errors}</div>; // Show error message if there is an error
   }
 
   return (
-    <ul>
-      {genres.map((genre) => (
-        <li key={genre.id}> {genre.name}</li> // Added key prop and removed semicolon
+    <div>
+      {data.map((genre) => (
+        <div key={genre.id}>{genre.name}</div>
       ))}
-    </ul>
+    </div>
   );
 };
 
