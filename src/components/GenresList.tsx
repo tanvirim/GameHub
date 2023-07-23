@@ -1,4 +1,4 @@
-import { HStack, Image, List, ListItem, Text } from "@chakra-ui/react";
+import { HStack, Image, List, ListItem, Spinner, Text } from "@chakra-ui/react";
 import useGenres from "../hooks/useGenres";
 import getCropedImageUrl from "../services/image-url";
 
@@ -6,7 +6,7 @@ const GenresList = () => {
   const { data, errors, loading } = useGenres();
 
   if (loading) {
-    return <div>Loading...</div>; // Show loading indicator while data is being fetched
+    return <Spinner></Spinner>; // Show loading indicator while data is being fetched
   }
 
   if (errors) {
