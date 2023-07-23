@@ -24,7 +24,9 @@ const SearchInput = ({ onSearch }: Props) => {
           placeholder="Search Games..."
           variant="filled"
         />
-        <Button type="submit">submit</Button>
+        <Button marginLeft={2} type="submit" borderRadius={15}>
+          Search
+        </Button>
       </InputGroup>
     </form>
   );
