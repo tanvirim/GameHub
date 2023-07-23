@@ -7,6 +7,8 @@ import {
   FaWindows,
   FaXbox,
 } from "react-icons/Fa";
+
+import { AiFillApple } from "react-icons/Ai";
 import { RiMacbookLine } from "react-icons/Ri";
 import { SiNintendo } from "react-icons/Si";
 import { Game } from "../hooks/useGames";
@@ -23,6 +25,7 @@ const PlatformIconList = ({ game }: Props) => {
     linux: FaLinux,
     android: FaAndroid,
     web: BsGlobe,
+    ios: AiFillApple,
   };
   return (
     <HStack>
