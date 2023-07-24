@@ -1,6 +1,6 @@
 import { Button, Input, InputGroup, InputLeftElement } from "@chakra-ui/react";
 import { useState } from "react"; // Import useState
-import { BsSearch } from "react-icons/Bs";
+import { BsSearch } from "react-icons/bs";
 import "../index.css";
 
 interface Props {
